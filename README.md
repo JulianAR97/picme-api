@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+This respository is meant to be used in conjunction with "https://github.com/JulianAR97/picme-client"
 
-* Ruby version
+## Instructions:
+1. Clone this respository
+2. Enter `rails db:drop` into terminal
+3. Enter `rails db:create` into terminal
+4. You can seed the database via `rails db:seed`, but it isn't necessary
+5. Start a server via `rails s`
+6. Clone [picme-client](https://github.com/JulianAR97/picme-client) repository
+7. Follow instructions in that respository's readme
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
