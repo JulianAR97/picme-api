@@ -3,7 +3,8 @@ class PicsController < ApplicationController
 
   # GET /pics
   def index
-    @pics = Pic.all
+    # make sure that the user_id param has a value
+    @pics = !!params[:user_id] && !params[:user_id].empty? ? User.find_by(uuid: params[:user_id]).pics : Pic.all
 
     render json: @pics
   end
@@ -15,7 +16,11 @@ class PicsController < ApplicationController
 
   # POST /pics
   def create
+    # Check if user already exists, if not, create one, and then add pic to user's pic collection
+    user = User.find_or_create_by(uuid: params[:user_id])
     @pic = Pic.new(pic_params)
+
+    user.pics << @pic
 
     if @pic.save
       render json: @pic, status: :created, location: @pic
@@ -46,6 +51,6 @@ class PicsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def pic_params
-      params.require(:pic).permit(:url, :likes, :author, :id)
+      params.require(:pic).permit(:url, :likes, :author, :id, :user_id)
     end
 end
