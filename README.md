@@ -1,7 +1,7 @@
 # README
 
 
-This respository is meant to be used in conjunction with "https://github.com/JulianAR97/picme-client"
+This respository is meant to be used in conjunction with [picme-client](https://github.com/JulianAR97/picme-client)
 
 ## Instructions:
 1. Clone this respository
