@@ -12,4 +12,7 @@ Pic.create(url: "https://i.picsum.photos/id/177/800/450.jpg?hmac=ADfl70ErGIBvgKX
 Pic.create(url: "https://i.picsum.photos/id/839/800/450.jpg?hmac=jEpxEgWhqdNkA7lDTRlNTGjXz4BQfr8nEqqgQTPc3Hg", id: 839, author: 'Abigail Keenan');
 
 
-
+User.create(uuid: '3a6673-5b-e0cb-2858-e187bd3500')
+User.create(uuid: 'abd2ed3-c286-a1a-b837-8ae32caa86dc')
+User.create(uuid: '12656d-37e6-2ac6-b7e4-7b6356ca21d1')
+User.create(uuid: '6b5ec3f-f8eb-4507-508-be821d2754')
